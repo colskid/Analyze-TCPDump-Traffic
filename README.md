@@ -11,7 +11,7 @@ Welcome to the **Analyze Network Traffic with TCPDump** project! This repository
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -24,3 +24,36 @@ To get started with the project, you'll need to have `tcpdump` installed on your
 ```sh
 sudo apt-get update
 sudo apt-get install tcpdump
+```
+
+## Usage
+
+To capture network traffic using tcpdump, you can use the following command:
+```sh
+sudo tcpdump -i eth0 -n -s 0 -w output.pcap
+```
+
+- -i eth0: Specifies the interface to capture traffic from. <br>
+- -n: Disables hostname resolution for faster capture. <br>
+- -s 0: Captures the entire packet. <br>
+- -w output.pcap: Writes the captured traffic to the output.pcap file. <br>
+
+## Examples
+
+### Capturing HTTP Traffic <br>
+To capture HTTP traffic, you can use a filter to target HTTP packets:
+
+```sh
+sudo tcpdump -i eth0 -n -s 0 -w http_traffic.pcap port 80
+```
+
+### Analyzing DNS Queries <br>
+To analyze DNS queries, you can filter for DNS packets:
+
+```sh
+sudo tcpdump -i eth0 -n -s 0 -w dns_queries.pcap port 53
+```
+
+## Contributing 
+Contributions to this project are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
+
