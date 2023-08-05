@@ -15,11 +15,11 @@ Welcome to the **Analyze Network Traffic with TCPDump** project! This repository
 
 ## Introduction
 
-In this project, we explore the usage of the `tcpdump` command-line tool to capture network traffic and analyze various protocols and data. This tool is commonly used for troubleshooting network issues, security analysis, and protocol debugging.
+In this project, I explore the usage of the `tcpdump` command-line tool to capture network traffic and analyze various protocols and data. This tool is commonly used for troubleshooting network issues, security analysis, and protocol debugging.
 
 ## Getting Started
 
-To get started with the project, you'll need to have `tcpdump` installed on your system. You can install it using package managers like `apt` or `brew`. Here's how to install it on Ubuntu:
+To get started with the project, I needed to have `tcpdump` installed on my system. You can install it using package managers like `apt` or `brew`. Here's how to install it on Ubuntu:
 
 ```sh
 sudo apt-get update
@@ -28,7 +28,7 @@ sudo apt-get install tcpdump
 
 ## Usage
 
-To capture network traffic using tcpdump, you can use the following command:
+To capture network traffic using tcpdump, I used the following command:
 ```sh
 sudo tcpdump -i eth0 -n -s 0 -w output.pcap
 ```
@@ -41,14 +41,14 @@ sudo tcpdump -i eth0 -n -s 0 -w output.pcap
 ## Examples
 
 ### Capturing HTTP Traffic <br>
-To capture HTTP traffic, you can use a filter to target HTTP packets:
+To capture HTTP traffic, I used a filter to target HTTP packets:
 
 ```sh
 sudo tcpdump -i eth0 -n -s 0 -w http_traffic.pcap port 80
 ```
 
 ### Analyzing DNS Queries <br>
-To analyze DNS queries, you can filter for DNS packets:
+To analyze DNS queries, I filtered for DNS packets:
 
 ```sh
 sudo tcpdump -i eth0 -n -s 0 -w dns_queries.pcap port 53
